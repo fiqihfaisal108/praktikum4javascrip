@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+	<meta charset="UTD-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Chat massage</title>
+</head>
+<body>
+	<div style="width: auto; stroke: black;" id="chat"></div>
+
+
+	<form method="REQUEST" onsubmit="return kirim();">
+
+		<input id="pesan" style="width: auto" type="text" name="pesan">
+		<button type="submit" onclick="return kirim();">-Kirim-</button>
+
+	</form>
+	
+</body>
+
+<script type="text/javascript">
+	function kirim() {
+
+		let pesan = document.getElementById("pesan").value;
+		document.getElementById("chat").innerHTML += pesan+"<br>";
+		document.getElementById("pesan").value = "";
+		
+		return false;
+	}
+</script>
+
+</html>

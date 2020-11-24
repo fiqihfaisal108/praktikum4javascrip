@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>IMAGE PICKER</title>
+</head>
+<body>
+
+	<center>
+		<select onchange="gantigambar();" id="listgambar">
+			<option value="https://i.pinimg.com/originals/9e/72/64/9e7264a888ee237b56e9661b1573156a.jpg">-pilih-</option>
+			<option value="https://i.pinimg.com/originals/42/d7/7b/42d77b9a5250407fc1a4b0f5b604a798.jpg	">-kucing-</option>
+			<option value="https://e7.pngegg.com/pngimages/180/375/png-clipart-hellhound-dog-demon-anime-fan-art-hellhound-mammal-dragon.png">-guguk-</option>
+			<option value="https://i0.wp.com/sarungan.net/wp-content/uploads/2019/12/singa.png">-singa-</option>
+			<option value="https://ae01.alicdn.com/kf/HTB1qtE3X_jxK1Rjy0Fnq6yBaFXaA/Beibehang-Papel-De-Parede-Wallpaper-Kustom-3D-Kartun-Jerapah-Lucu-Anak-Kamar-Latar-Belakang-Dinding-Mural.jpg">-jerapah-</option>
+			<option value="https://i.pinimg.com/originals/68/e3/f5/68e3f5e135c1aaf68d38db69cea4c5c1.jpg">-panda-</option>
+
+		</select>
+	</center>
+		<br/>
+	<img src="https://i.pinimg.com/originals/9e/72/64/9e7264a888ee237b56e9661b1573156a.jpg" style="width: 100%" id="gambar">
+
+</body>
+<script type="text/javascript">
+	function gantigambar() {
+		let gambar = document.getElementById("listgambar").value;
+		document.getElementById("gambar").src = gambar;
+		alert("Ini Gambar " + gambar);
+	}
+</script>
+</html>

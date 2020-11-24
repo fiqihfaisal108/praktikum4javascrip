@@ -1,0 +1,65 @@
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validasi</title>
+   
+</head>
+<body background="image/Tak berjudul19_20201122182340.png">
+    <div style="text-align: center; margin: 150; color: white;">
+        <center>
+            <h2>form validasi</h2>
+            <form action="">
+                <tr>
+                    <td><label for="">Nama :</label></td>
+                    <br><br/>
+                    <td><input type="text" name="nama" id="nama" required="" maxlength="30" placeholder="Nama Lengkap" style="border-radius: 7px; text-align: center;"></td>
+                    <br><br/>
+                    <td><label for="">E-Mail :</label></td>
+                    <br><br/>
+                    <td><input type="email" required="" name="email" id="email" placeholder="user@gmail.com" style="border-radius: 7px; text-align: center;"></td>
+                    <br><br/>
+                    <td><label for="">Tujuan Keberangkatan :</label></td>
+                    <br><br/>
+                    <td>
+                        <select name="Tujuan" name="tujuan" id="Tujuan" style="border-radius: 7px; text-align: center;">
+                            <option value="">-Silakan Pilih-</option>
+                            <option value="">Bandung</option>
+                            <option value="">Jakarta</option>
+                            <option value="">Malang</option>
+                            <option value="">Bogor</option>
+                            <option value="">Depok</option>
+                            <option value="">Bekasi</option>
+                        </select>
+                    </td><br><br/>
+                    <td><label for="">Jam Keberangkatan :</label></td>
+                    <br><br/>
+                    <td><input type="time" name="jam" id="jam" required="" style="border-radius: 7px; text-align: center;"></td>
+                    <br><br/>
+                    <td><label for="">Tiket :</label></td>
+                    <br><br/>
+                    <td><input type="number" name="tiket" id="tiket" min="1" max="10" placeholder="Jumlah Tiket" required="" style="border-radius: 7px; text-align: center;"></td>
+                    <br><br/>
+                    <br><button type="submit" style="border-radius: 7px;">KIRIM</button>
+                </tr>
+            </form>
+        </center>
+    </div>
+    
+</body>
+<script type="text/javascript">
+	function validasi() {
+		var nama = document.getElementById("nama").value;
+		var email = document.getElementById("email").value;
+		var tujuan = document.getElementById("tujuan").value;
+        var jam = document.getElementById("jam").value;
+		var tiket = document.getElementById("tiket").value;
+		if (nama != "" && email!="" && alamat !="" ) {
+			return true;
+		}else{
+			alert('Anda harus mengisi data dengan lengkap !');
+		}
+	}
+</script>
+</html>

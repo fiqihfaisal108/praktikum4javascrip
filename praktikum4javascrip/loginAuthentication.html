@@ -1,0 +1,63 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Login Authentication</title>
+	<style type="text/css">
+	.container {
+
+		margin: 200px;
+		color: white;
+
+	}
+
+	.input {
+		border-radius: 7px;
+		background-color: whitesmoke;
+		line-height: 20px;
+		text-align: center;
+	}
+
+	</style>
+</head>
+
+<body background="image/Tak berjudul19_20201122182340.png">
+	<!--username = fiqih-->
+	<!--password = nurulfikri-->
+	<div class="container">
+	<h2 style="text-align: center;">"Login Authentication"</h2>
+	
+	<center>
+		<form method="REQUEST">
+			Username : <br><br/>
+			<input type="text" placeholder="---username---" id="username" name="username" class="input"><br><br/>
+			Password : <br><br/>
+			<input type="password"  placeholder="---password---" id="password" name="password" class="input"><br><br/>
+			<button type="submit" onclick="return login()" class="input">Kirim</button>
+		</form>
+	</center>
+	</div>
+
+</body>
+<script type="text/javascript">
+	function login() {
+		username = document.getElementById("username").value;
+		password = document.getElementById("password").value;
+
+		if (username == "" || password == "") {
+			alert("Username / Password Tidak Boleh Kosong");
+			return false;
+		}
+		else if (password.length < 6) {
+			alert("Password Kurang dari 6");
+			return false;
+		}
+		else if (username == "fiqih" && password == "nurulfikri") {
+			window.location ="loginberhasil.html";
+			return false;
+		}else{
+			alert("Username / Password anda salah");
+		}
+	}
+</script>
+</html>
